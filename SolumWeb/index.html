@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="h-screen">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./assets/SolumLogo.png">
+    <title>Solum</title>
+</head> 
+
+<body class="h-full w-full bg-[#eef7f0] flex flex-col justify-start items-center">
+    <nav class="z-1000 top-0 fixed w-full h-16 bg-[#0e2111]/90 backdrop-blur-sm flex flex-row items-center justify-between">
+        <div class="flex flex-row items-center ml-4 md:ml-39 gap-2">
+            <img src="./assets/SolumLogo.png" class="h-9 aspect-square rounded-xl">
+            <p class="text-white font-black text-xl tracking-tight">SOLUM</p>
+        </div>
+        <div class="md:flex md:flex-row items-center gap-8 mr-39 hidden">
+            <button class="text-xs text-white/35 leading-relaxed hover:text-[#87ceeb] hover:cursor-pointer transition" id="btn-inicio">Início</button>
+            <button class="text-xs text-white/35 leading-relaxed hover:text-[#87ceeb] hover:cursor-pointer transition" id="btn-sobre">Sobre</button>
+            <button class="text-xs text-white/35 leading-relaxed hover:text-[#87ceeb] hover:cursor-pointer transition" id="btn-solucao">Soluções</button>
+            <button class="text-xs text-white/35 leading-relaxed hover:text-[#87ceeb] hover:cursor-pointer transition" id="btn-beneficio">Benefícios</button>
+            <button class="rounded-full bg-[#4a7c2e] px-6 py-2.5 text-white text-sm font-bold hover:cursor-pointer hover:bg-[#5a8c35] transition" id="btn-contato">Fale conosco</button>
+        </div>
+    </nav>
+    <div class="relative bg-[url(../assets/TractorLandscape.jpg)] bg-cover bg-bottom w-full md:h-screen aspect-[12/9] scroll-mt-16" id="inicio">
+
+        <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+
+        <div class="absolute bg-[#0e2111]/30 w-90 aspect-[9/1] mt-25 ml-39 rounded-4xl hidden md:flex flex-row gap-3 items-center border-3 border-[#0e2111]">
+            <div class="ml-4 rounded-xl bg-[#0e2111] h-2 aspect-square"></div>
+            <p class="font-medium text-[#0e2111] text-sm">Projeto de Ensino Médio - Ciência & Tecnologia</p>
+        </div>
+        <p class="absolute font-black text-white md:text-8xl text-3xl md:mt-43 md:ml-39 mt-33 ml-4 leading-7 md:leading-24 drop-shadow-lg">Sensor Solar 
+            <br><span class="bg-gradient-to-r from-[#87ceeb] via-[#c5e3f5] to-[#87ceeb] bg-clip-text text-transparent">Inteligente</span>
+            <br> para o Campo
+        </p>
+        <p class="hidden md:inline text-xl absolute text-white/75 mt-121 ml-39 drop-shadow-md leading-7">Um protótipo desenvolvido por alunos do 2º ano para
+            <br> monitorar o solo e o clima da agricultura familiar, unindo
+            <br> tecnologia IoT com sustentabilidade.
+        </p>
+        <button class="md:mt-152 md:ml-39 ml-4 mt-60 rounded-full bg-gradient-to-r from-[#64a63d] to-[#71bf43] brightness-100 md:px-10 px-4 py-1 md:py-4 text-white md:text-[16px] text-sm font-bold shadow-xl hover:scale-110 active:scale-95 hover:cursor-pointer transition">
+            Conheça o projeto → 
+        </button>
+    </div>
+    <div class="w-full h-[1200px] bg-[#eef7f0] mt-13 md:mt-33 flex md:flex-row flex-col items-center justify-items-center gap-5 scroll-mt-16" id="sobre">
+        <div class="md:w-144 flex flex-col md:ml-39 ml-4 h-full">
+            <p class="font-semibold uppercase md:text-[15px] text-xs text-[#4f8037] tracking-wide">Sobre o Projeto</p>
+            <h1 class="font-black md:text-5xl text-2xl mt-3 md:leading-[50px] leading-[20px] text-[#0D2010]   ">Da sala de aula
+                <br><span class="bg-gradient-to-r from-[#4f8037] to-[#5ba4ce] bg-clip-text text-transparent">para o campo</span>
+            </h1>
+            <p class=" md:text-lg text-sm leading-relaxed mt-5 text-[#234215]/65">
+                 O <span class="font-bold">SOLUM</span> nasceu como projeto interdisciplinar das disciplinas de Banco
+                 de Dados, Aplicativos Mobile, Programação Web e Desenvolvimento de 
+                 Sistemas  do 2º ano do Ensino Técnico. Nossa proposta é desenvolver
+                 um sensor de baixo custo, alimentado por energia solar, capaz de 
+                 monitorar condições do solo para apoiar pequenos agricultores e
+                 a agricultura familiar. 
+            </p>
+            <p class="md:text-lg text-sm leading-relaxed mt-2 text-[#234215]/65">
+                Usando componentes acessíveis como ESP32, sensores de umidade e
+                temperatura, e um pequeno painel solar, criamos um protótipo real que 
+                transmite dados via LoRaWAN e exibe as informações em um painel 
+                online — tudo feito pelos alunos.
+            </p>
+            <button class="hidden md:block text-[#4a7c2e] text font-bold rounded-full border-2 border-[#4a7c2e] w-47 mt-6 py-3 hover:cursor-pointer hover:text-white hover:bg-[#4a7c2e] transition">
+                Ver o Protótipo →
+            </button>
+        </div>
+        <div class="md:w-164 w-80 h-80 md:h-100  md:ml-5 grid grid-cols-2 grid-rows-2 items-center justify-items-center md:gap-0 gap-5">
+            <div class="bg-white md:h-[180px] h-[150px] md:aspect-5/3 aspect-square rounded-2xl shadow-lg hover:shadow-xl transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open-icon lucide-book-open bg-[#4a7c2e] rounded-2xl p-[10px] text-white md:mt-5 mt-3 md:ml-5 ml-3 md:w-13 md:h-13 w-11 h-11"><path d="M12 5v16"/><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"/></svg>
+                <p class="font-black md:text-3xl text-xl text-[#0d2024] md:mt-4 mt-3 md:ml-5 ml-3">2°</p>
+                <p class="md:text-sm text-xs mt-1 text-black/50 md:ml-5 ml-3">Ano do Ensino Médio</p>
+            </div>
+            <div class="bg-white md:h-[180px] h-[150px] md:aspect-5/3 aspect-square rounded-2xl shadow-lg hover:shadow-xl transition"">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users bg-[#5ba5cf] rounded-2xl p-[10px] text-white md:mt-5 mt-3 md:ml-5 ml-3 md:w-13 md:h-13 w-11 h-11"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
+                <p class="font-black md:text-3xl text-xl text-[#0d2024] md:mt-4 mt-3 md:ml-5 ml-3">3</p>
+                <p class="md:text-sm text-xs mt-1 text-black/50 md:ml-5 ml-3">Integrantes na Equipe</p>
+            </div>
+            <div class="bg-white md:h-[180px] h-[150px] md:aspect-5/3 aspect-square rounded-2xl shadow-lg hover:shadow-xl transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu-icon lucide-cpu bg-[#4a7c2e] rounded-2xl p-[10px] text-white md:mt-5 mt-3 md:ml-5 ml-3 md:w-13 md:h-13 w-11 h-11"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg>
+                <p class="font-black md:text-3xl text-xl text-[#0d2024] md:mt-4 mt-3 md:ml-5 ml-3">1</p>
+                <p class="md:text-sm text-xs mt-1 text-black/50 md:ml-5 ml-3">Protótipo Funcional</p>
+            </div>
+            <div class="bg-white md:h-[180px] h-[150px] md:aspect-5/3 aspect-square rounded-2xl shadow-lg hover:shadow-xl transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-leaf-icon lucide-leaf bg-[#5ba5cf] rounded-2xl p-[10px] text-white md:mt-5 mt-3 md:ml-5 ml-3 md:w-13 md:h-13 w-11 h-11"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                <p class="font-black md:text-3xl text-xl text-[#0d2024] md:mt-4 mt-3 md:ml-5 ml-3">100%</p>
+                <p class="md:text-sm text-xs mt-1 text-black/50 md:ml-5 ml-3">Energia Solar</p>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-[1200px] md:h-auto bg-[#eef7f0] mt-13 md:mt-37 flex flex-col items-center md:gap-15 gap-8 scroll-mt-16" id="solucao">
+        <div class="w-full h-auto flex flex-col items-center md:gap-3 gap-1">
+            <p class="font-semibold md:text-sm text-xs uppercase tracking-widest text-[#4a7c2e]">Como funciona</p>
+            <p class="font-black md:text-5xl text-xl text-[#0d2024]">Os Componentes do Projeto</p>
+            <p class="md:w-165 md:text-lg text-sm text-[#0D2010]/55 text-center">Cada parte do SOLUM foi escolhida e montada pelos alunos, usando materiais de baixo custo e fácil acesso.</p>
+        </div>
+        <div class="md:w-[1030px] h-auto grid grid-cols-2 grid-rows-2 items-center justify-items-center gap-5">
+            <div class="bg-white md:h-[210px] h-[150px] md:aspect-12/5 aspect-6/5 rounded-2xl shadow-lg hover:shadow-xl transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplets bg-[#4a7c2e] rounded-2xl p-[10px] text-white md:mt-10 mt-3 md:ml-8 ml-3 md:w-13 md:h-13 w-11 h-11"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg>
+                <p class="font-black md:text-lg text-lg text-[#0d2024] md:mt-4 mt-3 md:ml-8 ml-3">Sensor de Umidade do Solo</p>
+                <p class="md:text-sm text-xs mt-1 text-black/50 md:ml-8 ml-3 md:block hidden">Mede o teor de água no solo em tempo real, indicando quando a planta <br> precisa de irrigação e evitando desperdício de água.</p>
+            </div>
+            <div class="bg-white md:h-[210px] h-[150px] md:aspect-12/5 aspect-6/5 rounded-2xl shadow-lg hover:shadow-xl transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thermometer bg-gradient-to-r from-[#5ba4ce] to-[#4f8037] rounded-2xl p-[10px] text-white md:mt-10 mt-3 md:ml-8 ml-3 md:w-13 md:h-13 w-11 h-11"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg>
+                <p class="font-black md:text-lg text-xl text-[#0d2024] md:mt-4 mt-3 md:ml-8 ml-3">Sensor de Temperatura</p>
+                <p class="md:text-sm text-xs mt-1 text-black/50 md:ml-8 ml-3 md:block hidden">Registra a temperatura do ar e do solo, ajudando a identificar risco de <br> geada ou excesso de calor para a lavoura.</p>
+            </div>
+            <div class="bg-white md:h-[210px] h-[150px] md:aspect-12/5 aspect-6/5 rounded-2xl shadow-lg hover:shadow-xl transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wifi bg-[#112918] rounded-2xl p-[10px] text-white md:mt-10 mt-3 md:ml-8 ml-3 md:w-13 md:h-13 w-11 h-11"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.859a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/></svg>
+                <p class="font-black md:text-lg text-xl text-[#0d2024] md:mt-4 mt-3 md:ml-8 ml-3">Transmissão LoRaWAN</p>
+                <p class="md:text-sm text-xs mt-1 text-black/50 md:ml-8 ml-3 md:block hidden">Os dados são enviados por rádio frequência de longo alcance, sem precisar <br> de Wi-Fi ou sinal de celular na propriedade.</p>
+            </div>
+            <div class="bg-white md:h-[210px] h-[150px] md:aspect-12/5 aspect-6/5 rounded-2xl shadow-lg hover:shadow-xl transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun bg-[#66aed6] rounded-2xl p-[10px] text-white md:mt-10 mt-3 md:ml-8 ml-3 md:w-13 md:h-13 w-11 h-11"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                <p class="font-black md:text-lg text-xl text-[#0d2024] md:mt-4 mt-3 md:ml-8 ml-3">Painel Solar</p>
+                <p class="md:text-sm text-xs mt-1 text-black/50 md:ml-8 ml-3 md:block hidden">O sensor é 100% autônomo: um pequeno painel solar carrega a bateria e <br> garante funcionamento contínuo sem custo de energia.</p>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-[1500px] bg-[#142f1c] mt-13 md:mt-25 flex flex-col items-center md:gap-15 gap-8 scroll-mt-16" id="beneficio">
+        <div class="w-full h-auto flex flex-col items-center md:gap-3 gap-1 md:mt-25 mt-10">
+            <p class="font-semibold md:text-sm text-xs uppercase tracking-widest text-[#6ab9e0]">Impacto e Aprendizado</p>
+            <p class="font-black md:text-5xl text-xl text-[#ffffff]">Por que o SOLUM importa?</p>
+            <p class="md:w-165 w-100 md:text-lg text-sm text-[#ffffff]/45 text-center">Mais do que um projeto escolar, o SOLUM é uma proposta real de solução tecnológica para o agronegócio sustentável.</p>
+        </div>
+        <div class="md:w-[1130px] h-auto md:h-[600px] grid grid-cols-3 grid-rows-2 items-center justify-items-center gap-5 md:gap-0">
+            <div class="bg-white/5 md:h-[210px] h-[120px] md:aspect-5/3 aspect-square rounded-2xl border border-white/10 hover:border-[#66aed6]/25 shadow-lg hover:shadow-xl transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sprout bg-[#66aed6]/20 rounded-2xl p-[10px] text-[#87ceeb] md:mt-5 mt-3 md:ml-5 ml-3 md:w-13 md:h-13 w-10 h-10"><path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3"/><path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4"/><path d="M5 21h14"/></svg>
+                <p class="font-black md:text-lg text-xs text-[#ffffff] md:mt-4 mt-3 md:ml-5 ml-3">Apoio à Agricultura Familiar</p>
+                <p class="md:w-70 md:text-[13px] text-xs mt-1 text-[#ffffff]/45 md:ml-5 ml-3 md:block hidden">O projeto foi pensado para ajudar pequenos produtores rurais que não têm acesso a tecnologias caras de monitoramento.</p>
+            </div>
+            <div class="bg-white/5 md:h-[210px] h-[120px] md:aspect-5/3 aspect-square rounded-2xl border border-white/10 hover:border-[#66aed6]/25 shadow-lg hover:shadow-xl transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign bg-[#66aed6]/20 rounded-2xl p-[10px] text-[#87ceeb] md:mt-5 mt-3 md:ml-5 ml-3 md:w-13 md:h-13 w-10 h-10"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <p class="font-black md:text-lg text-xs text-[#ffffff] md:mt-4 mt-3 md:ml-5 ml-3">Custo Acessível</p>
+                <p class="md:w-70 md:text-[13px] text-xs mt-1 text-[#ffffff]/45 md:ml-5 ml-3 md:block hidden">Todo o hardware custa menos de R$ 150, tornando a solução viável para qualquer propriedade rural de pequeno porte.</p>
+            </div>
+            <div class="bg-white/5 md:h-[210px] h-[120px] md:aspect-5/3 aspect-square rounded-2xl border border-white/10 hover:border-[#66aed6]/25 shadow-lg hover:shadow-xl transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wifi bg-[#66aed6]/20 rounded-2xl p-[10px] text-[#87ceeb] md:mt-5 mt-3 md:ml-5 ml-3 md:w-13 md:h-13 w-10 h-10"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.859a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/></svg>
+                <p class="font-black md:text-lg text-xs text-[#ffffff] md:mt-4 mt-3 md:ml-5 ml-3">Sem Internet no Campo</p>
+                <p class="md:w-70 md:text-[13px] text-xs mt-1 text-[#ffffff]/45 md:ml-5 ml-3 md:block hidden">Funciona sem Wi-Fi ou 4G: o protocolo LoRaWAN transmite dados a até 10km de distância usando rádio frequência.</p>
+            </div>
+            <div class="bg-white/5 md:h-[210px] h-[120px] md:aspect-5/3 aspect-square rounded-2xl border border-white/10 hover:border-[#66aed6]/25 shadow-lg hover:shadow-xl transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-battery bg-[#66aed6]/20 rounded-2xl p-[10px] text-[#87ceeb] md:mt-5 mt-3 md:ml-5 ml-3 md:w-13 md:h-13 w-10 h-10"><path d="M 22 14 L 22 10"/><rect x="2" y="6" width="16" height="12" rx="2"/></svg>
+                <p class="font-black md:text-lg text-xs text-[#ffffff] md:mt-4 mt-3 md:ml-5 ml-3">Zero Custo de Energia</p>
+                <p class="md:w-70 md:text-[13px] text-xs mt-1 text-[#ffffff]/45 md:ml-5 ml-3 md:block hidden">O painel solar recarrega a bateria durante o dia, garantindo funcionamento noturno e em dias nublados.</p>
+            </div>
+            <div class="bg-white/5 md:h-[210px] h-[120px] md:aspect-5/3 aspect-square rounded-2xl border border-white/10 hover:border-[#66aed6]/25 shadow-lg hover:shadow-xl transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column bg-[#66aed6]/20 rounded-2xl p-[10px] text-[#87ceeb] md:mt-5 mt-3 md:ml-5 ml-3 md:w-13 md:h-13 w-10 h-10"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+                <p class="font-black md:text-lg text-xs text-[#ffffff] md:mt-4 mt-3 md:ml-5 ml-3">Dados em Tempo Real</p>
+                <p class="md:w-70 md:text-[13px] text-xs mt-1 text-[#ffffff]/45 md:ml-5 ml-3 md:block hidden">Um painel online simples exibe temperatura, umidade e alertas para o agricultor acompanhar pelo celular.</p>
+            </div>
+            <div class="bg-white/5 md:h-[210px] h-[120px] md:aspect-5/3 aspect-square rounded-2xl border border-white/10 hover:border-[#66aed6]/25 shadow-lg hover:shadow-xl transition">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap bg-[#66aed6]/20 rounded-2xl p-[10px] text-[#87ceeb] md:mt-5 mt-3 md:ml-5 ml-3 md:w-13 md:h-13 w-10 h-10"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+                <p class="font-black md:text-lg text-xs text-[#ffffff] md:mt-4 mt-3 md:ml-5 ml-3">Aprendizado Prático</p>
+                <p class="md:w-70 md:text-[13px] text-xs mt-1 text-[#ffffff]/45 md:ml-5 ml-3 md:block hidden">O projeto uniu conteúdos de Física, Química, Biologia, Informática e Empreendedorismo de forma aplicada e real.</p>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-[1200px] md:h-auto bg-[#eef7f0] mt-13 md:mt-25 md:flex md:flex-col items-center md:gap-15 gap-8 hidden scroll-mt-16" id="contato">
+        <div class="w-full h-auto flex flex-col items-center md:gap-3 gap-1">
+            <p class="font-semibold md:text-sm text-xs uppercase tracking-widest text-[#4a7c2e]">Contato</p>
+            <p class="font-black md:text-5xl text-xl text-[#0d2024]">Fale com a Equipe SOLUM</p>
+            <p class="md:w-165 md:text-lg text-sm text-[#0D2010]/55 text-center">Tem dúvidas sobre o projeto, quer saber mais ou deseja convidar a equipe para apresentar? Manda mensagem!</p>
+        </div>
+        <div class="md:w-[1100px] h-auto flex flex-row items-center gap-10">
+            <div class="bg-[#142f1c] md:w-[550px] w-[325px] md:aspect-7/6 aspect-6/5 rounded-3xl shadow-lg hover:shadow-xl transition">
+                <div class="w-auto h-auto flex flex-col gap-2 md:mt-10 md:ml-8">
+                    <p class="font-black md:text-xl text-xl text-[#ffffff]">Informações da Equipe</p>
+                    <p class="md:text-sm text-sm text-[#ffffff]/45">Somos alunos do 3º ano do Ensino Médio apaixonados por tecnologia e sustentabilidade.</p>
+                </div>
+                <div class="md:w-[250px] flex flex-col md:mt-8 md:ml-8 md:gap-8 items-start">
+                    <div class="flex flex-row md:gap-4 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-school bg-[#66aed6]/20 rounded-2xl p-[10px] text-[#87ceeb] md:w-12 md:h-12 w-10 h-10"><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M18 4.933V21"/><path d="m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6"/><path d="m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11"/><path d="M6 4.933V21"/><circle cx="12" cy="9" r="2"/></svg>
+                        <div class="flex flex-col items-start gap-1">
+                            <p class="font-black md:text-sm text-xl text-[#ffffff]">Escola</p>
+                            <p class="md:text-xs text-sm text-[#ffffff]/45">Colégio Técnico — Turma 2°DS</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row md:gap-4 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail bg-[#66aed6]/20 rounded-2xl p-[10px] text-[#87ceeb] md:w-12 md:h-12 w-10 h-10"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+                        <div class="flex flex-col items-start gap-1">   
+                            <p class="font-black md:text-sm text-xl text-[#ffffff]">E-mail do Projeto</p>
+                            <p class="md:text-xs text-sm text-[#ffffff]/45">solum.projeto@escola.edu.br</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row md:gap-4 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-camera bg-[#66aed6]/20 rounded-2xl p-[10px] text-[#87ceeb] md:w-12 md:h-12 w-10 h-10"><path d="M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z"/><circle cx="12" cy="13" r="3"/></svg>
+                        <div class="flex flex-col items-start gap-1">
+                            <p class="font-black md:text-sm text-xl text-[#ffffff]">Instagram</p>
+                            <p class="md:text-xs text-sm text-[#ffffff]/45">@solum.projeto</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2 md:ml-8 md:mt-5"">
+                    <p class="font-semibold md:text-xs text-xs uppercase tracking-widest text-white/45">Integrantes</p>
+                    <div class="flex flex-row gap-5">
+                        <div class="text-white/60 text-xs text-center w-auto h-5 px-3 bg-[#66aed6]/20 rounded-4xl border border border-[#66aed6]/25">
+                            Leonardo Gouveia
+                        </div>
+                        <div class="text-white/60 text-xs text-center w-auto h-5 px-3 bg-[#66aed6]/20 rounded-4xl border border border-[#66aed6]/25">
+                            Iago
+                        </div>
+                        <div class="text-white/60 text-xs text-center w-auto h-5 px-3 bg-[#66aed6]/20 rounded-4xl border border border-[#66aed6]/25">
+                            João Vitor
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form id="form-contato" class="bg-white md:w-[550px] w-[325px] md:aspect-7/6 aspect-6/5 rounded-3xl shadow-lg hover:shadow-xl transition flex flex-col gap-5">
+                <div class="flex flex-col gap-2 mt-10 ml-8">
+                    <label for="nome" class="text-sm font-semibold">Seu nome</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        required
+                        placeholder="Como podemos te chamar?"
+                        class="w-[450px] h-10 border border-[#66aed6]/40 rounded-xl p-3 text-xs focus:outline-none focus:border-black transition"
+                    />
+                </div>
+                <div class="flex flex-col gap-2 ml-8">
+                    <label for="email" class="text-sm font-semibold">E-mail</label>
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="seu@email.com"
+                        class="w-[450px] h-10 border border-[#66aed6]/40 rounded-xl p-3 text-xs focus:outline-none focus:border-black transition"
+                    />
+                </div>
+                <div class="flex flex-col gap-2 ml-8">
+                    <label for="mensagem" class="text-sm font-semibold">Mensagem</label>
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        required
+                        placeholder="Dúvidas, sugestões, convites para apresentações..."
+                        class="w-[450px] h-30 border border-[#66aed6]/40 rounded-xl p-3 text-xs focus:outline-none focus:border-black transition resize-none"
+                        rows="5"
+                    ></textarea>
+                </div>
+                <button
+                    type="submit"
+                    id="btn-enviar" 
+                    class="w-[450px] h-13 text-center text font-semibold text-white bg-[#578934] rounded-3xl ml-8 hover:cursor-pointer active:scale-95 transition"
+                >
+                    Enviar Mensagem
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="w-full h-[900px] bg-[#0d2010] mt-13 md:mt-25 md:flex md:flex-col hidden items-center md:gap-15 gap-8">
+        <div class="flex flex-row gap-9 mt-10 items-start w-[1200px]">
+            <div class="flex flex-col gap-5 items-start w-[250px]">
+                <div class="flex flex-row gap-2 items-start">
+                    <img src="./assets/SolumLogo.png" class="h-9 aspect-square rounded-xl">
+                    <p class="text-white font-black text-xl tracking-tight">SOLUM</p>
+                </div>
+                <p class="text-xs text-white/35 leading-relaxed">Projeto de Ensino Médio — sensor IoT solar para monitoramento agrícola. Desenvolvido por alunos do 3º ano com foco em sustentabilidade e inovação.</p>
+            </div>
+            <div class="flex flex-col gap-4 items-start w-[100px]">
+                <p class="text-sm text-white font-semibold">O Projeto</p>
+                <p class="text-xs text-white/35 leading-relaxed hover:text-[#87ceeb] hover:cursor-pointer transition">Sobre o SOLUM</p>
+                <p class="text-xs text-white/35 leading-relaxed hover:text-[#87ceeb] hover:cursor-pointer transition">Como Funciona</p>
+                <p class="text-xs text-white/35 leading-relaxed hover:text-[#87ceeb] hover:cursor-pointer transition">Protótipo</p>
+                <p class="text-xs text-white/35 leading-relaxed hover:text-[#87ceeb] hover:cursor-pointer transition">Resultados</p>
+            </div>
+            <div class="flex flex-col gap-4 items-start w-[150px] ml-40">
+                <p class="text-sm text-white font-semibold">Tecnologias Usadas</p>
+                <p class="text-xs text-white/35 leading-relaxed hover:text-[#87ceeb] hover:cursor-pointer transition">ESP32</p>
+                <p class="text-xs text-white/35 leading-relaxed hover:text-[#87ceeb] hover:cursor-pointer transition">LoRaWAN</p>
+                <p class="text-xs text-white/35 leading-relaxed hover:text-[#87ceeb] hover:cursor-pointer transition">Sensor DHT22</p>
+                <p class="text-xs text-white/35 leading-relaxed hover:text-[#87ceeb] hover:cursor-pointer transition">Impressão 3D</p>
+            </div>
+            <div class="flex flex-col gap-4 items-start w-[200px] ml-40">
+                <p class="text-sm text-white font-semibold">Disciplinas</p>
+                <p class="text-xs text-white/35 leading-relaxed hover:text-[#87ceeb] hover:cursor-pointer transition">Física</p>
+                <p class="text-xs text-white/35 leading-relaxed hover:text-[#87ceeb] hover:cursor-pointer transition">Química</p>
+                <p class="text-xs text-white/35 leading-relaxed hover:text-[#87ceeb] hover:cursor-pointer transition">Biologia</p>
+                <p class="text-xs text-white/35 leading-relaxed hover:text-[#87ceeb] hover:cursor-pointer transition">Desenvolvimento de Sistemas</p>
+            </div>
+        </div>
+        <spam class="text-white/10 mt-[-30px]">______________________________________________________________________________________________________________________________________________________________________________________</spam>
+        <div class="flex flex-row justify-between items-center w-[1210px] pb-18">
+            <p class="text-xs text-white/20 leading-relaxed">© 2025 SOLUM — Projeto Escolar. Todos os direitos reservados.</p>
+            <p class="text-xs text-white/20 leading-relaxed">Feito com dedicação por alunos do Ensino Médio</p>
+        </div>
+    </div>
+    <script src="Solum.js"></script>
+</body>
+
+</html>
