@@ -44,7 +44,7 @@ formContato.addEventListener("submit", async (e) => {
     btnEnviar.textContent = "Enviando...";
 
     try {
-        const resp = await fetch("http://localhost:8080/api/email", {
+        const resp = await fetch("https://solum-landpage.onrender.com/api/email", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(dados)

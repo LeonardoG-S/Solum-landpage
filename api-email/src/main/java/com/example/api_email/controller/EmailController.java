@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/email")
-@CrossOrigin(origins = "*") // em produção, troque pelo endereço do seu site
+@CrossOrigin(origins = "https://solumlandpage.netlify.app/")
 public class EmailController {
 
     private final EmailService service;
